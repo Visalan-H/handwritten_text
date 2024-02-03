@@ -1,162 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Handwritten to Text</title>
-    <script
-      src="https://kit.fontawesome.com/9d82c50b1f.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/9d82c50b1f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
     <style>
-      * {
-        font-family: "Montserrat";
-      }
-      body {
-        background-color: #7ecdee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-      }
-      .title {
-        text-align: center;
-        color: #0e0f3b;
-        font-family: "Montserrat";
-        margin-bottom: 60px;
-      }
-      .drag-area {
-        border: 2px dashed #fff;
-        height: 500px;
-        width: 700px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .drag-area:active {
-        border: 2px solid #fff;
-      }
+        * {
+            font-family: "Montserrat";
+        }
 
-      .drag-area .icon {
-        font-size: 100px;
-        margin-top: -200px;
-        margin-bottom: 80px;
-        position: absolute;
-      }
-      .drag-area header {
-        font-size: 30px;
-        font-weight: 500;
-        font-family: "Montserrat";
-        position: absolute;
-        margin-top: -80px;
-      }
+        body {
+            background-color: #7ecdee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
 
-      .drag-area span {
-        font-size: 25px;
-        font-weight: 500;
-        color: black;
-        margin: 10px 0px 15px 0px;
-        font-family: "Montserrat";
-        position: absolute;
-        margin-top: 40px;
-      }
+        .title {
+            text-align: center;
+            color: #0e0f3b;
+            font-family: "Montserrat";
+            margin-bottom: 60px;
+        }
 
-      .drag-area button {
-        padding: 10px 25px;
-        font-size: 20px;
-        font-weight: 500;
-        border: none;
-        outline: none;
-        background: #fff;
-        color: black;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: "Montserrat";
-        margin-top: 150px;
-        position: absolute;
-      }
-      button:hover {
-        background-color: black;
-        color: #fff;
-        transform: scale(1.1);
-        transition: all 0.7s;
-      }
-      button:active {
-        background-color: white;
-        color: black;
-      }
-      .icon:hover {
-        color: white;
-        transform: scale(1.1);
-        transition: all 0.7s;
-      }
-      p {
-        text-align: center;
-        margin-top: 380px;
-        font-weight: 500;
-        color: black;
-      }
+        .drag-area {
+            border: 2px dashed #fff;
+            height: 500px;
+            width: 700px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
 
-      .convert-button{
-        padding: 10px 25px;
-        font-size: 20px;
-        font-weight: 500;
-        border: none;
-        outline: none;
-        background: #fff;
-        color: black;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: "Montserrat";
-        margin-top: 20px;
-        margin-left: 290px;
+        .drag-area:active {
+            border: 2px solid #fff;
+        }
 
-      }
+        .drag-area .icon {
+            font-size: 100px;
+            margin-top: -200px;
+            margin-bottom: 80px;
+            position: absolute;
+        }
+
+        .drag-area header {
+            font-size: 30px;
+            font-weight: 500;
+            font-family: "Montserrat";
+            position: absolute;
+            margin-top: -80px;
+        }
+
+        .drag-area span {
+            font-size: 25px;
+            font-weight: 500;
+            color: black;
+            margin: 10px 0px 15px 0px;
+            font-family: "Montserrat";
+            position: absolute;
+            margin-top: 40px;
+        }
+
+        .drag-area button {
+            padding: 10px 25px;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            background: #fff;
+            color: black;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: "Montserrat";
+            margin-top: 150px;
+            position: absolute;
+        }
+
+        button:hover {
+            background-color: black;
+            color: #fff;
+            transform: scale(1.1);
+            transition: all 0.7s;
+        }
+
+        button:active {
+            background-color: white;
+            color: black;
+        }
+
+        .icon:hover {
+            color: white;
+            transform: scale(1.1);
+            transition: all 0.7s;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 380px;
+            font-weight: 500;
+            color: black;
+        }
+
+        .convert-button {
+            padding: 10px 25px;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            background: #fff;
+            color: black;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: "Montserrat";
+            margin-top: 20px;
+            margin-left: 290px;
+
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="title">
-        <h1>Handwritten to text</h1>
-      </div>
-      <form action="handwritten_to_text" method="post">
-        {% csrf_token %}
-      <div class="drag-area">
-        <div class="icon"><i class="fa-solid fa-cloud-arrow-up" id="browseButton1"></i></div>
-        <header>Drag and Drop to Upload your file</header>
-        <span>(or)</span>
-        <button id="browseButton">Browse File</button>
-        <input type="file" hidden id="fileInput" />
-        <p>
-          Transform handwritten notes into digital documents effortlessly with
-          our intuitive <br />
-          text-to-doc conversion tool
-        </p>
-      </div>
+</head>
 
-      <button class="convert-button" type="submit" >Convert</button>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Handwritten to text</h1>
+        </div>
+        <form action="handwritten_to_text" method="post">
+            {% csrf_token %}
+            <div class="drag-area">
+                <div class="icon"><i class="fa-solid fa-cloud-arrow-up" id="browseButton1"></i></div>
+                <header>Drag and Drop to Upload your file</header>
+                <span>(or)</span>
+                <button id="browseButton">Browse File</button>
+                <input type="file" hidden id="fileInput" />
+                <p>
+                    Transform handwritten notes into digital documents effortlessly with
+                    our intuitive <br />
+                    text-to-doc conversion tool
+                </p>
+            </div>
+
+            <button class="convert-button" type="submit">Convert</button>
     </div>
     </form>
 
     <script>
-      document
-        .getElementById("browseButton")
-        .addEventListener("click", function () {
-          document.getElementById("fileInput").click();
+        document.getElementById("browseButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById("fileInput").click();
         });
-        document
-        .getElementById("browseButton1")
-        .addEventListener("click", function () {
-          document.getElementById("fileInput").click();
+
+        document.getElementById("browseButton1").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById("fileInput").click();
         });
     </script>
-  </body>
+</body>
+
 </html>
